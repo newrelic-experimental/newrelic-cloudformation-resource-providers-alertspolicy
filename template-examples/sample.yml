@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Sample New Relic Workloads Template
+Resources:
+  Resource1:
+    Type: 'NewRelic::Observability::AlertsPolicy'
+    Properties:
+      Name: 'CloudFormation test stack- alert policy'
+      IncidentPreference: 'PER_POLICY'
+Outputs:
+  CustomResourceId:
+    Value: !GetAtt Resource1.Id
