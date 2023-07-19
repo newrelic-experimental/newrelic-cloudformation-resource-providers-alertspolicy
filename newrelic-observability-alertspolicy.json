@@ -87,6 +87,10 @@
       },
       "AccountID": {
         "type": "string"
+      },
+      "LogLevel": {
+        "type": "string",
+        "default": "info"
       }
     },
     "additionalProperties": false,
