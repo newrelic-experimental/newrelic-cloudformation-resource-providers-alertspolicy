@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "Endpoint": {
+            "type": "string",
+            "default": "https://api.newrelic.com/graphql"
+        },
+        "APIKey": {
+            "type": "string"
+        },
+        "AccountID": {
+            "type": "string"
+        },
+        "LogLevel": {
+            "type": "string",
+            "default": "info"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "APIKey",
+        "AccountID"
+    ],
+    "definitions": {
+        "incidentPreferenceEnum": {
+            "type": "string",
+            "enum": [
+                "PER_CONDITION",
+                "PER_CONDITION_AND_TARGET",
+                "PER_POLICY"
+            ]
+        }
+    },
+    "typeName": "NewRelic::Observability::AlertsPolicy"
+}
